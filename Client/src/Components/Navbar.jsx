@@ -1,4 +1,4 @@
-import Logo from '../../public/Logo.svg'
+import Logo from '../assets/Logo.svg'
 
 const Navbar = () => (
     <header className="bg-gray-600 backdrop-blur-md sticky top-0 z-10 border-b border-gray-700">
