@@ -1,13 +1,12 @@
-import React from 'react'
-import { FileJson} from 'lucide-react';
+import Logo from '../../public/Logo.svg'
 
 const Navbar = () => (
-    <header className="bg-gray-900 backdrop-blur-md sticky top-0 z-10 border-b border-gray-700">
+    <header className="bg-gray-600 backdrop-blur-md sticky top-0 z-10 border-b border-gray-700">
         <div className="max-w-5xl  px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-                <div className="flex items-center space-x-3">
-                    <FileJson className="h-8 w-8 text-indigo-400" />
-                    <h1 className="text-xl font-semibold text-gray-200">OCR System</h1>
+            <div className="flex items-center justify-between h-14">
+                <div className="flex items-center space-x-2">
+                    <img src={Logo} alt="" className='h-8' />
+                    <h1 className="text-lg font-normal text-gray-200">Texify</h1>
                 </div>
             </div>
         </div>

@@ -119,14 +119,17 @@ const Drop = () => {
         <div className="min-h-screen bg-black font-sans text-gray-300">
             <main className="flex flex-col items-center p-4 sm:p-6 md:p-10">
                 <div className="w-full max-w-3xl rounded-2xl shadow-2xl p-6 md:p-8 transform transition-all duration-500">
-                    <div className="text-center mb-8">
-                        <h2 className="text-3xl font-extrabold text-gray-100 sm:text-4xl">
-                            Unlock Insights from Your Documents
-                        </h2>
-                        <p className="mt-3 max-w-md mx-auto text-lg text-gray-400">
-                            Effortlessly extract text and structured data from PDFs and images with the power of AI.
-                        </p>
-                    </div>
+                  <div className="text-center mb-8">
+  <h2 className="text-3xl font-bold text-gray-100 sm:text-4xl">
+    Unlock Insights from Your Documents
+  </h2>
+  <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+    Upload PDFs, images, or scanned files and let our AI-powered OCR system 
+    instantly extract text with high accuracy. Transform unstructured data 
+    into searchable, editable, and organized information — all in seconds.
+  </p>
+</div>
+
 
                     {!file && (
                         <div
@@ -137,8 +140,9 @@ const Drop = () => {
                         >
                             <input {...getInputProps()} />
                             <div className="text-center">
-                                <Upload className="mx-auto h-12 w-12 text-gray-500" />
-                                <p className="mt-2 font-semibold text-indigo-400">
+                          
+                                <Upload strokeWidth={1} className="mx-auto h-12 w-12 text-gray-500" />
+                                <p className="mt-2 font-medium text-indigo-400">
                                     {isDragActive ? "Drop it like it's hot!" : "Click to upload or drag & drop"}
                                 </p>
                                 <p className="text-xs text-gray-500 mt-1">PDF, JPG, PNG, or WEBP</p>
@@ -178,24 +182,23 @@ const Drop = () => {
 
                     {extractedText && (
                         <div className="animate-fade-in-up mt-8">
-                             <h3 className="flex items-center gap-2 font-bold text-xl text-gray-200 mb-4">
-                                {isJson ? <FileJson className="w-7 h-7 text-indigo-400" /> : <FileText className="w-7 h-7 text-indigo-400" />}
+                             <h3 className="flex items-center gap-2 font-medium text-xl text-gray-200 mb-4">
                                 Extracted Content
                             </h3>
-                            <div className="bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden border border-gray-700">
+                            <div className="bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden border border-gray-700/10">
                                 <div className="bg-gray-700 flex items-center p-2.5">
                                     <div className="flex space-x-2">
                                         <div className="w-3 h-3 rounded-full bg-red-500"></div>
                                         <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                                         <div className="w-3 h-3 rounded-full bg-green-500"></div>
                                     </div>
-                                    <p className="text-center text-sm font-semibold text-gray-300 flex-grow -ml-10">zsh</p>
+                                    <p className="text-center text-sm font-medium text-gray-300 flex-grow -ml-10">Edit your Data</p>
                                 </div>
                                 
                                 <textarea
                                     value={extractedText}
                                     onChange={(e) => setExtractedText(e.target.value)}
-                                    className="w-full h-96 bg-[#1e1e1e] text-green-400 p-4 font-mono text-sm border-none focus:ring-0 resize-none selection:bg-green-400/30"
+                                    className="w-full h-96 bg-[#1e1e1e]   focus:outline-none focus:ring-0 text-green-50 p-4 font-sans text-sm border-none resize-none selection:bg-yellow-200/20"
                                     spellCheck="false"
                                 />
                             </div>
