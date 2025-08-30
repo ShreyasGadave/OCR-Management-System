@@ -118,7 +118,7 @@ const Drop = () => {
     return (
         <div className="min-h-screen bg-black font-sans text-gray-300">
             <main className="flex flex-col items-center p-4 sm:p-6 md:p-10">
-                <div className="w-full max-w-3xl bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl p-6 md:p-8 transform transition-all duration-500">
+                <div className="w-full max-w-3xl rounded-2xl shadow-2xl p-6 md:p-8 transform transition-all duration-500">
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-extrabold text-gray-100 sm:text-4xl">
                             Unlock Insights from Your Documents
@@ -203,18 +203,7 @@ const Drop = () => {
                     )}
                 </div>
             </main>
-            <style jsx global>{`
-                .animate-fade-in-up {
-                    animation: fadeInUp 0.5s ease-out forwards;
-                }
-                @keyframes fadeInUp {
-                    from { opacity: 0; transform: translateY(20px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                textarea::selection {
-                    background-color: rgba(56, 189, 107, 0.3);
-                }
-            `}</style>
+        
         </div>
     );
 };
